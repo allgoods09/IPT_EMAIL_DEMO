@@ -1,4 +1,15 @@
 <x-app-layout>
+    @if(session('status'))
+        <div id="status-message" style="padding: 15px; margin-bottom: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px;">
+            {{ session('status') }}
+        </div>
+
+        <script>
+            setTimeout(function() {
+                document.getElementById('status-message').style.display = 'none';
+            }, 5000); // 5000ms = 5 seconds
+        </script>
+    @endif
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Statement of Accounts') }}
