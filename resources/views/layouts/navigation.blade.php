@@ -25,7 +25,7 @@
                         {{ __('Transactions') }}
                     </x-nav-link>
                     <x-nav-link :href="route('soa.index')" :active="request()->routeIs('soa.*')">
-                        {{ __('For SOA') }}
+                        {{ __('Statement of Account') }}
                     </x-nav-link>
                 </div>
             </div>
