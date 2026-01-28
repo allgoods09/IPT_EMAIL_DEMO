@@ -15,43 +15,43 @@ class CustomerSeeder extends Seeder
     public function run(): void
     {
         // Create specific customers with user accounts
-        $customer1User = User::factory()->create([
-            'name' => 'Benjie Lenteria',
-            'email' => 'benjielenteria@yahoo.com',
-        ]);
+        // $customer1User = User::factory()->create([
+        //     'name' => 'Benjie Lenteria',
+        //     'email' => 'benjielenteria@yahoo.com',
+        // ]);
 
-        Customer::factory()->create([
-            'user_id' => $customer1User->id,
-            'name' => 'Benjie Lenteria',
-            'email' => 'benjielenteria@yahoo.com',
-            'phone' => '09171234567',
-            'address' => '123 Main St, Manila, Philippines',
-        ]);
+        // Customer::factory()->create([
+        //     'user_id' => $customer1User->id,
+        //     'name' => 'Benjie Lenteria',
+        //     'email' => 'benjielenteria@yahoo.com',
+        //     'phone' => '09171234567',
+        //     'address' => '123 Main St, Manila, Philippines',
+        // ]);
 
-        $customer2User = User::factory()->create([
-            'name' => 'Lentrix Hawkman',
-            'email' => 'hawkmanlentrix@gmail.com',
-        ]);
+        // $customer2User = User::factory()->create([
+        //     'name' => 'Lentrix Hawkman',
+        //     'email' => 'hawkmanlentrix@gmail.com',
+        // ]);
 
-        Customer::factory()->create([
-            'user_id' => $customer2User->id,
-            'name' => 'Lentrix Hawkman',
-            'email' => 'hawkmanlentrix@gmail.com',
-            'phone' => '09179876543',
-            'address' => '456 Oak Ave, Quezon City, Philippines',
-        ]);
+        // Customer::factory()->create([
+        //     'user_id' => $customer2User->id,
+        //     'name' => 'Lentrix Hawkman',
+        //     'email' => 'hawkmanlentrix@gmail.com',
+        //     'phone' => '09179876543',
+        //     'address' => '456 Oak Ave, Quezon City, Philippines',
+        // ]);
 
         $customer3User = User::factory()->create([
-            'name' => 'Lentrix of MDC',
-            'email' => 'lentrix@materdeicollege.com',
+            'name' => 'Cristino Algodon',
+            'email' => 'cristinoalgodon@gmail.com',
         ]);
 
         Customer::factory()->create([
             'user_id' => $customer3User->id,
-            'name' => 'Lentrix of MDC',
-            'email' => 'lentrix@materdeicollege.com',
+            'name' => 'Cristino Algodon',
+            'email' => 'cristinoalgodon@gmail.com',
             'phone' => '09221234567',
-            'address' => '789 Pine Rd, Makati, Philippines',
+            'address' => 'Cahayag, Tubigon, Bohol, Philippines',
         ]);
 
         // Create additional customers with user accounts

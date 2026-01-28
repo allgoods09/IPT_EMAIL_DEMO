@@ -23,8 +23,8 @@ class AccountSeeder extends Seeder
 
         // Create 1-3 accounts for each customer
         foreach ($customers as $customer) {
-            $accountCount = rand(1, 3);
-            
+            $accountCount = rand(1, 30);
+
             for ($i = 0; $i < $accountCount; $i++) {
                 Account::factory()->create([
                     'customer_id' => $customer->id,
