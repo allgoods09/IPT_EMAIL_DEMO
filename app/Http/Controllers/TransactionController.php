@@ -7,6 +7,7 @@ use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Jobs\SendTransactionEmail;
 
 class TransactionController extends Controller
 {
@@ -57,7 +58,7 @@ class TransactionController extends Controller
             }
 
             // Create the transaction
-            Transaction::create([
+            $transaction = Transaction::create([
                 'account_id' => $validated['account_id'],
                 'transaction_number' => $validated['transaction_number'],
                 'type' => $validated['type'],
@@ -79,6 +80,9 @@ class TransactionController extends Controller
             }
             
             $account->save();
+
+            // Dispatch transaction email
+            SendTransactionEmail::dispatch($transaction);
         });
 
         return redirect()->route('transactions.index')
